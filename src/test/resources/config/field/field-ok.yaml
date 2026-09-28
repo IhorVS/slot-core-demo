@@ -1,0 +1,6 @@
+fieldHeight: 3
+
+reels:
+  - [ A, K, Q, WILD ]
+  - [ K, Q, A, SCT ]
+  - [ Q, A, K, MUL ]

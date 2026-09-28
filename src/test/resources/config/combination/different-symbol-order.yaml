@@ -1,0 +1,14 @@
+wildSymbols: [ WLD ]
+
+combinations:
+  linear:
+    A:
+      - id: 0
+        symbols: [ SCT, MUL ]
+        prizes: [ C10 ]
+  scatter:
+    SCT:
+      - id: 1
+        symbols: [ MUL, SCT ]
+        prizes: [ C15 ]
+

@@ -1,0 +1,9 @@
+wildSymbols: [ WLD ]
+
+combinations:
+  linear:
+    A:
+      - id: 0
+        symbols: [ A, A, A ]
+        prizes: [ C10 ]
+  scatter: { }

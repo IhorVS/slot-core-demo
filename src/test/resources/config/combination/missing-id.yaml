@@ -1,0 +1,7 @@
+wildSymbols: [ WLD ]
+
+combinations:
+  linear:
+    A:
+      - symbols: [ A, A, A ]
+        prizes: [ C10 ]

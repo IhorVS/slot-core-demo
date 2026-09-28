@@ -1,0 +1,79 @@
+# Symbols that can substitute for regular symbols
+# when matching linear combinations.
+wildSymbols: [ WLD ]
+
+combinations:
+  # Linear combinations are matched along configured winning lines.
+  #
+  # Prize codes:
+  #   C<N>  - fixed prize of N tokens.
+  #           Tokens are converted to money when the player requests a payout.
+  #
+  #   x<N>  - multiplier prize.
+  #           Multiplies the player's current balance by N.
+  #
+  #   FS<N> - awards N free spins.
+  #
+  # Prize codes describe the type and value of a prize.
+  # Applying a specific prize is the responsibility of the concrete slot
+  # implementation and is outside the scope of the core library.
+
+  linear:
+    # Combination group.
+    #
+    # All matched combinations in the same group are resolved
+    # according to the same CombinationMatchPolicy.
+    A:
+      # Three A symbols form a winning combination.
+      # The combination awards 10 tokens.
+      - id: 0
+        symbols: [ A, A, A ]
+        prizes: [ C10 ]
+
+      # Four A symbols form a winning combination.
+      # The combination awards 25 tokens.
+      - id: 1
+        symbols: [ A, A, A, A ]
+        prizes: [ C25 ]
+
+      # Five A symbols form a winning combination.
+      # The combination awards 100 tokens and 1 free spin.
+      - id: 2
+        symbols: [ A, A, A, A, A ]
+        prizes: [ C100, FS1 ]
+
+  # Scatter combinations are matched independently of winning lines.
+  scatter:
+    # Combination group for scatter symbol SCT.
+    SCT:
+      # Three SCT symbols award 15 tokens and 3 free spins.
+      - id: 3
+        symbols: [ SCT, SCT, SCT ]
+        prizes: [ C15, FS3 ]
+
+      # Four SCT symbols award 50 tokens.
+      - id: 4
+        symbols: [ SCT, SCT, SCT, SCT ]
+        prizes: [ C50 ]
+
+      # Five SCT symbols award 200 tokens.
+      - id: 5
+        symbols: [ SCT, SCT, SCT, SCT, SCT ]
+        prizes: [ C200 ]
+
+    # Combination group for multiplier symbol MUL.
+    MUL:
+      # Three MUL symbols award a 2x multiplier.
+      - id: 6
+        symbols: [ MUL, MUL, MUL ]
+        prizes: [ x2 ]
+
+      # Four MUL symbols award a 4x multiplier.
+      - id: 7
+        symbols: [ MUL, MUL, MUL, MUL ]
+        prizes: [ x4 ]
+
+      # Five MUL symbols award a 10x multiplier.
+      - id: 8
+        symbols: [ MUL, MUL, MUL, MUL, MUL ]
+        prizes: [ x10 ]

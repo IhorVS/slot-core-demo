@@ -1,0 +1,88 @@
+# Winning lines for a 5x3 slot field:
+# 5 reels (columns) with 3 visible positions (rows) each.
+#
+# Each winning line is defined as a sequence of row indices,
+# one row index for each reel from left to right.
+#
+# Row indices are zero-based:
+#   0 - top row
+#   1 - middle row
+#   2 - bottom row
+#
+# Each line must contain exactly 5 row indices,
+# one for each reel.
+lines:
+  # Top horizontal line:
+  #
+  #   X X X X X
+  #   . . . . .
+  #   . . . . .
+  #
+  - [ 0, 0, 0, 0, 0 ]
+
+  # Middle horizontal line:
+  #
+  #   . . . . .
+  #   X X X X X
+  #   . . . . .
+  #
+  - [ 1, 1, 1, 1, 1 ]
+
+  # Bottom horizontal line:
+  #
+  #   . . . . .
+  #   . . . . .
+  #   X X X X X
+  #
+  - [ 2, 2, 2, 2, 2 ]
+
+  # V-shaped line:
+  #
+  #   X . . . X
+  #   . X . X .
+  #   . . X . .
+  #
+  # - [0, 1, 2, 1, 0]
+
+  # Inverted V-shaped line:
+  #
+  #   . . X . .
+  #   . X . X .
+  #   X . . . X
+  #
+  # - [2, 1, 0, 1, 2]
+
+  # Zigzag line:
+  #
+  #   X . X . X
+  #   . X . X .
+  #   . . . . .
+  #
+  # - [0, 1, 0, 1, 0]
+
+  # Another zigzag line:
+  #
+  #   . . . . .
+  #   X . X . X
+  #   . X . X .
+  #
+  # - [1, 2, 1, 2, 1]
+
+  # Invalid: line contains fewer positions than there are reels.
+  # The field has 5 reels, but this line contains only 4 row indices.
+  #
+  # - [0, 1, 2, 1]
+
+  # Invalid: line contains more positions than there are reels.
+  # The field has 5 reels, but this line contains 6 row indices.
+  #
+  # - [0, 1, 2, 1, 0, 1]
+
+  # Invalid: row index is outside the field height.
+  # The field height is 3, so valid row indices are 0, 1, and 2.
+  #
+  # - [0, 1, 3, 1, 0]
+
+  # Invalid: negative row index.
+  #
+  # - [0, 1, -1, 1, 0]

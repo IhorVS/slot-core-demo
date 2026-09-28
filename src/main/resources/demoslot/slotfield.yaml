@@ -1,0 +1,24 @@
+# Number of visible positions in each reel.
+# A single value means that all reels have the same number of visible
+# positions, defining a rectangular game field.
+#
+# This value is specific to this slot configuration.
+# In principle, reels may have different numbers of visible positions,
+# allowing a non-rectangular game field. In that case, the concrete slot
+# implementation must be able to determine the visible positions for
+# each reel from the configuration.
+fieldHeight: 3
+
+# Reel configurations from left to right.
+# Each list contains the symbols placed on the corresponding reel
+# in their physical order.
+#
+# Reel positions are zero-based and cyclic.
+# The position supplied for a reel determines the top visible symbol;
+# the following symbols fill the field from top to bottom.
+reels:
+  - [ A, K, Q, J, WLD, A, SCT, K, Q, A, J, WLD, MUL ]
+  - [ K, A, J, MUL, Q, A, WLD, K, A, Q, J, K, SCT ]
+  - [ Q, A, WLD, K, J, A, SCT, Q, A, K, J, Q, MUL ]
+  - [ J, WLD, A, Q, MUL, K, A, J, Q, A, K, J, SCT ]
+  - [ A, Q, K, WLD, J, SCT, A, K, Q, A, J, K, MUL ]

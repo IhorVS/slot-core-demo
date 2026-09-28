@@ -1,0 +1,37 @@
+wildSymbols: [ WLD ]
+
+combinations:
+  linear:
+    A:
+      - id: 0
+        symbols: [ A, A, A ]
+        prizes: [ C10 ]
+      - id: 1
+        symbols: [ A, A, A, A ]
+        prizes: [ C25 ]
+      - id: 2
+        symbols: [ A, A, A, A, A ]
+        prizes: [ C100, FS1 ]
+
+  scatter:
+    SCT:
+      - id: 3
+        symbols: [ SCT, SCT, SCT ]
+        prizes: [ C15, FS3 ]
+      - id: 4
+        symbols: [ SCT, SCT, SCT, SCT ]
+        prizes: [ C50 ]
+      - id: 5
+        symbols: [ SCT, SCT, SCT, SCT, SCT ]
+        prizes: [ C200 ]
+
+    MUL:
+      - id: 6
+        symbols: [ MUL, MUL, MUL ]
+        prizes: [ x2 ]
+      - id: 7
+        symbols: [ MUL, MUL, MUL, MUL ]
+        prizes: [ x4 ]
+      - id: 8
+        symbols: [ MUL, MUL, MUL, MUL, MUL ]
+        prizes: [ x10 ]
